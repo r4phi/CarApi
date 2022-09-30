@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Auto CRUD</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+<h1>AUTO CRUD</h1>
+<h3>Add</h3>
+<form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+    <input type="text" id="add-manufacturer" placeholder="Manufacturer">
+    <input type="text" id="add-type" placeholder="Type">
+    <input type="number" id="add-salesprice" placeholder="Salesprice">
+    <input type="date" id="add-nextcheck" placeholder="Next Check">
+    <input type="number" id="add-power" placeholder="Power">
+    <input type="number" id="add-km" placeholder="Km">
+    <input type="submit" value="Add">
+</form>
+
+<div id="editForm">
+    <h3>Edit</h3>
+    <form action="javascript:void(0);" onsubmit="updateItem()">
+        <input type="hidden" id="edit-id">
+        <input type="text" id="edit-manufacturer">
+        <input type="text" id="edit-type">
+        <input type="number" id="edit-salesprice">
+        <input type="date" id="edit-nextcheck">
+        <input type="number" id="edit-power">
+        <input type="number" id="edit-km">
+        <input type="submit" value="Save">
+        <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+    </form>
+</div>
+
+<p id="counter"></p>
+
+<table>
+    <tr>
+        <th>Manufacturer</th>
+        <th>Type</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tbody id="cars"></tbody>
+</table>
+
+<script src="js/site.js" asp-append-version="true"></script>
+<script type="text/javascript">
+    getItems();
+</script>
+</body>
+</html>

@@ -2,11 +2,11 @@ namespace CarApi.Models;
 
 public class Car
 {
-    public int Id { get; set; }
-    private string Manufacturer { get; set; }
-    private string Type { get; set; }
-    private string Salesprice { get; set; }
-    private DateTime NextCheck { get; set; }
-    private int Power { get; set; }
-    private int Km { get; set; }
+    public long Id { get; set; }
+    public string Manufacturer { get; set; }
+    public string Type { get; set; }
+    public string Salesprice { get; set; }
+    public DateTime NextCheck { get; set; }
+    public int Power { get; set; }
+    public int Km { get; set; }
 }
